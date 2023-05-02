@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
+import NavBar from "./NavBar";
+import ArtList from "./ArtList";
+import ArtForm from "./ArtForm"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    const [artForAuction, setArtForAuction] = useState({});
+
+    useEffect(() => {
+      fetch("http://localhost:3000/art")
+      .then((r) => r.json())
+      .then((art) => setArtForAuction(art))
+    }, []);
+
+    console.log(artForAuction)
+
+    return (
+        <div>
+            <NavBar />
+            <Switch>
+                <Route path="/art">
+                    <ArtList artForAuction={artForAuction} />
+                </Route>
+                <Route exact path="/">
+                    <div>
+                        <h1>Art's Auction House</h1>
+                    </div>
+                </Route>
+                <Route path="/sellers">
+                    <ArtForm />
+                </Route>
+            </Switch>
+        </div>
+    );
+} 
 
 export default App;
