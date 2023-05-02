@@ -1,0 +1,37 @@
+{
+    "art": [
+      {
+        "id": 1,
+        "title": "I Wanna Be Dead With My Friends",
+        "artist": "Matt Gondek",
+        "medium": "Acrylic on Canvas",
+        "image": "https://images.squarespace-cdn.com/content/v1/5e447e280fffa302906c1c21/1608059250265-L055JLO5RF2K9Q3A5BHH/2020Dead.jpg?format=1500w",
+        "openingPrice": "$10,000.00"
+      },
+      {
+        "id": 2,
+        "title": "Every Day Counts",
+        "artist": "Greg Mike",
+        "medium": "Acrylic on Canvas",
+        "image": "https://images.squarespace-cdn.com/content/v1/513e7d67e4b0970eaf210a87/1591372894704-XH3VAIYM44HH5QDJ2JSO/GREG-MIKE-EDC2.jpg?format=2500w",
+        "openingPrice": "12,500.00"
+      },
+      {
+        "id": 3,
+        "title": "Untitled (2015)",
+        "artist": "Jason Revok",
+        "medium": "Spraypaint on Wood",
+        "image": "https://www.jasonrevok.com/wp-content/uploads/2021/01/20150921-untitled_shootuntitled_AKE8801JASONREVOK_9_2_web-1860x1860.jpg",
+        "openingPrice": "$25,000.00"
+      },
+      {
+        "id": 4,
+        "title": "Super Supper",
+        "artist": "Ron Enlgish",
+        "medium": "Lithograph",
+        "image": "https://d7hftxdivxxvm.cloudfront.net/?height=604&quality=80&resize_to=fit&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2Fxr_XGJeu7MS6MRwynpKzhQ%2Fnormalized.jpg&width=800",
+        "openingPrice": "$9,500.00"
+      }
+    ]
+  }
+  
