@@ -3,7 +3,8 @@ import { Form } from "semantic-ui-react"
 
 function ArtForm(
     handleArtistChange,
-    formData
+    formData,
+    handleTitleChange
 ) {
     return (
         <div>
@@ -23,6 +24,8 @@ function ArtForm(
                         label="Title of Work:"
                         placeholder="Title of Work"
                         name="Title of Work"
+                        onChange={handleTitleChange}
+                        value={formData.title}
                     />
                     <Form.Input
                         fluid
