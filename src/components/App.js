@@ -6,12 +6,33 @@ import ArtForm from "./ArtForm"
 
 function App() {
     const [artForAuction, setArtForAuction] = useState({});
+    const [formData, setFormData] = useState({
+        name: "",
+        artist: "",
+        medium: "",
+        image: "",
+        openingPrice: "",
+    })
 
     useEffect(() => {
       fetch("http://localhost:3000/art")
       .then((r) => r.json())
       .then((art) => setArtForAuction(art))
     }, []);
+
+    function handleArtistChange(e) {
+        setFormData({
+            ...formData,
+            artist: e.target.value
+        });
+    }
+
+    function handleTitleChange(e) {
+        setFormData({
+            ...formData,
+            title: e.target.value
+        });
+    }
 
     console.log(artForAuction)
 
@@ -25,10 +46,16 @@ function App() {
                 <Route exact path="/">
                     <div>
                         <h1>Art's Auction House</h1>
+                        <br></br>
+                        <p>Art's Auction House is the premiere purveyor of contemporary art in Buffalo, NY</p>
                     </div>
                 </Route>
                 <Route path="/sellers">
-                    <ArtForm />
+                    <ArtForm 
+                        handleArtistChange={handleArtistChange}
+                        formData={formData}
+                        handleTitleChange={handleTitleChange}
+                    />
                 </Route>
             </Switch>
         </div>
