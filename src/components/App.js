@@ -34,6 +34,13 @@ function App() {
         });
     }
 
+    function handleImageChange(e) {
+        setFormData({
+            ...formData,
+            image: e.target.value
+        });
+    }
+
     console.log(artForAuction)
 
     return (
