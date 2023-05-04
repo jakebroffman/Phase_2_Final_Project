@@ -5,12 +5,13 @@ function ArtForm(
     handleArtistChange,
     formData,
     handleTitleChange,
-    handleImageChange
+    handleImageChange,
+    handlePriceChange
 ) {
     return (
         <div>
             <h2>List A Work For Auction:</h2>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Form.Group widths="equal">
                     <Form.Input 
                         fluid
@@ -41,6 +42,8 @@ function ArtForm(
                         label="Asking Price:"
                         placeholder="$12,000.00"
                         name="Asking Price"
+                        onChange={handlePriceChange}
+                        value={formData.openingPrice}
                     />
                 </Form.Group>
                 <Form.Button>Submit</Form.Button>
