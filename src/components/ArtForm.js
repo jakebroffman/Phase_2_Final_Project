@@ -1,7 +1,10 @@
 import React from "react";
 import { Form } from "semantic-ui-react"
 
-function ArtForm() {
+function ArtForm(
+    handleArtistChange,
+    formData
+) {
     return (
         <div>
             <h2>List A Work For Auction:</h2>
@@ -12,6 +15,8 @@ function ArtForm() {
                         label="Artist Name:"
                         placeholder="Artist"
                         name="Artist"
+                        onChange={handleArtistChange}
+                        value={formData.artist}
                     />
                     <Form.Input
                         fluid
@@ -32,6 +37,7 @@ function ArtForm() {
                         name="Asking Price"
                     />
                 </Form.Group>
+                <Form.Button>Submit</Form.Button>
             </Form>
         </div>
     )
