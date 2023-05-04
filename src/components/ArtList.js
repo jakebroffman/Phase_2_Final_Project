@@ -1,6 +1,6 @@
 import React from "react";
 import ArtCard from "./ArtCard"
-import { Container } from "semantic-ui-react";
+import { Container, Card } from "semantic-ui-react";
 
 function ArtList({ artForAuction }) {
 
@@ -16,7 +16,9 @@ function ArtList({ artForAuction }) {
         <Container>
         <h1>Auction Lots Currently Open For Bidding:</h1>
         <br />
-        {artToDisplay}
+            <Card.Group itemsPerRow={3}>
+                {artToDisplay}
+            </Card.Group>
         <br />
         </Container>
     );
