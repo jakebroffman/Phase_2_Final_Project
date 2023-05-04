@@ -41,6 +41,13 @@ function App() {
         });
     }
 
+    function handlePriceChange(e) {
+        setFormData({
+            ...formData,
+            openingPrice: e.target.value
+        });
+    }
+
     console.log(artForAuction)
 
     return (
@@ -62,6 +69,8 @@ function App() {
                         handleArtistChange={handleArtistChange}
                         formData={formData}
                         handleTitleChange={handleTitleChange}
+                        handleImageChange={handleImageChange}
+                        handlePriceChange={handlePriceChange}
                     />
                 </Route>
             </Switch>
