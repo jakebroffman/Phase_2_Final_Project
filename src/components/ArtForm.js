@@ -1,16 +1,18 @@
 import React from "react";
 import { Form } from "semantic-ui-react"
 
-function ArtForm(
+function ArtForm( {
     handleArtistChange,
     formData,
     handleTitleChange,
     handleImageChange,
-    handlePriceChange
-) {
+    handlePriceChange,
+    handleSubmit
+} ) {
+    
     return (
-        <div>
-            <h2>List A Work For Auction:</h2>
+        <div className="form-box">
+            <h1>List A Work For Auction:</h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group widths="equal">
                     <Form.Input 
@@ -40,7 +42,7 @@ function ArtForm(
                     <Form.Input
                         fluid
                         label="Asking Price:"
-                        placeholder="$12,000.00"
+                        placeholder="$12,000.00 (use this format)"
                         name="Asking Price"
                         onChange={handlePriceChange}
                         value={formData.openingPrice}
