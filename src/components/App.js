@@ -5,72 +5,54 @@ import ArtList from "./ArtList";
 import ArtForm from "./ArtForm"
 
 function App() {
-    const [artForAuction, setArtForAuction] = useState({});
-    const [formData, setFormData] = useState({
-        name: "",
-        artist: "",
-        medium: "",
-        image: "",
-        openingPrice: "",
-    })
+    const [artForAuction, setArtForAuction] = useState([]);
+    const [searchTerm, setSearchTerm] = useState ("")
 
+ 
     useEffect(() => {
       fetch("http://localhost:3000/art")
       .then((r) => r.json())
       .then((art) => setArtForAuction(art))
     }, []);
 
-    function handleArtistChange(e) {
-        setFormData({
-            ...formData,
-            artist: e.target.value
-        });
+    function handleSearchChange(e) {
+        const updatedSearchTerm = e.target.value
+        setSearchTerm(updatedSearchTerm)
     }
 
-    function handleTitleChange(e) {
-        setFormData({
-            ...formData,
-            title: e.target.value
-        });
-    }
-
-    function handleImageChange(e) {
-        setFormData({
-            ...formData,
-            image: e.target.value
-        });
-    }
-
-    function handlePriceChange(e) {
-        setFormData({
-            ...formData,
-            openingPrice: e.target.value
-        });
-    }
-
-    console.log(artForAuction)
+    const artToDisplay = artForAuction.filter((art) => {
+        if (searchTerm === "") {
+            return (true)
+        }
+        else {
+            return(art.artist.includes(searchTerm))
+        }
+    })
 
     return (
         <div>
             <NavBar />
             <Switch>
                 <Route path="/art">
-                    <ArtList artForAuction={artForAuction} />
+                    <ArtList 
+                        artForAuction={artToDisplay}
+                        handleSearchChange={handleSearchChange} 
+                    />
                 </Route>
                 <Route exact path="/">
                     <div>
-                        <h1>Art's Auction House</h1>
                         <br></br>
-                        <p>Art's Auction House is the premiere purveyor of contemporary art in Buffalo, NY</p>
+                        <h1 className="business-title">Art's Auction House</h1>
+                        <br></br>
+                        <div className="des">
+                        <p calssName="des">Art's Auction House is the premiere purveyor of contemporary art in Buffalo, NY! For the past 20 years Art's Auction House has been the East Coast home to the work of such prolific artists as: Tristan Eaton, Shepard Fairey, Jason Revok, Matt Gondek, Greg Mike, AskewOne, L'amour Supreme, and many more!</p>
+                        </div>
                     </div>
                 </Route>
                 <Route path="/sellers">
                     <ArtForm 
-                        handleArtistChange={handleArtistChange}
-                        formData={formData}
-                        handleTitleChange={handleTitleChange}
-                        handleImageChange={handleImageChange}
-                        handlePriceChange={handlePriceChange}
+                        artForAuction={artForAuction}
+                        setArtForAuction={setArtForAuction}
                     />
                 </Route>
             </Switch>
