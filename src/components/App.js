@@ -40,13 +40,14 @@ function App() {
                     />
                 </Route>
                 <Route exact path="/">
-                    <div>
+                    <div className="home">
                         <br></br>
                         <h1 className="business-title">Art's Auction House</h1>
                         <br></br>
                         <div className="des">
                         <p calssName="des">Art's Auction House is the premiere purveyor of contemporary art in Buffalo, NY! For the past 20 years Art's Auction House has been the East Coast home to the work of such prolific artists as: Tristan Eaton, Shepard Fairey, Jason Revok, Matt Gondek, Greg Mike, AskewOne, L'amour Supreme, and many more!</p>
                         </div>
+                        <img clasName="auction-house" src="https://i.insider.com/5cbf707ab14bf42699221511?width=2000&format=jpeg&auto=webp" alt="auction house" />
                     </div>
                 </Route>
                 <Route path="/sellers">
