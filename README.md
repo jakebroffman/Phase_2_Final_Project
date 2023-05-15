@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Art Auction App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React.js app functions as an art auction app for a fictional auction house. It allows users to view art pieces for sale, search for art pieces by artist, and list their own art pieces for sale.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- 
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository
+2. Run `npm install` to install the necessary dependencies
+3. Run `npm start` to start the app in development mode
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-### `npm test`
+Click here for a [Video Walk Through of the app.](https://youtu.be/WX6xeQ7Ck_o) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+The app has three links on the navigation bar:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Home** - Displays information about the physical auction house and shows a photo of what it looks like during a live auction.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Art for Sale** - Displays a list of art works that are generated from data in a restful API. Users can search for art pieces by artist using the search bar.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **List a Work to Sell** - Displays a form that allows users to input data to list their own art pieces for sale. The required fields are the artist name, name of the artwork, an asking price, a link to a photo of the artwork, and the medium the work is made of.
 
-### `npm run eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- View information about the physical auction house and see a photo of what it looks like during a live auction.
+- View a list of art pieces for sale that are generated from a restful API.
+- Search for art pieces by artist.
+- List your own art pieces for sale by filling out a form with required fields.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Contributions are welcome. If you find a bug or have an idea for a new feature, please open an issue first.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To make a contribution:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the repository
+2. Create a new branch for your feature or bug fix
+3. Write your code and tests
+4. Commit your changes
+5. Push your changes to your fork
+6. Create a pull request
